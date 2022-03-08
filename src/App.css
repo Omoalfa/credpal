@@ -1,38 +1,240 @@
-.App {
-  text-align: center;
+.top {
+    background-image: url('./assets/Group.png');
+    /* min-height: 100vh; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+    align-items: center;
+    position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.my-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.nav-bar {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0
 }
 
-.App-link {
-  color: #61dafb;
+.nav-items {
+    margin: 0 10px;
+    padding: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hamburger { 
+    display: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--second);
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 70px;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 50px;
+}
+
+h3 {
+    font-weight: 700;
+    font-size: 37px;
+    margin-bottom: 20px;
+}
+
+section {
+    margin-bottom: 90px;
+}
+
+section.first {
+    margin-bottom: 0;
+    margin-top: 120px;
+    padding-bottom: 240px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+}
+
+.form-group label {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card.budget {
+    border: 5px solid rgba(3, 3, 3, 0.493);
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 900px;
+    margin: auto;
+    position: relative;
+}
+
+.cloud {
+    position: absolute;
+    right: -17%;
+    top: 30%
+}
+
+.form-group input[type=number] {
+    position: relative;
+    z-index: 1;
+    display: none;
+    /* background-color: transparent; */
+}
+.display-screen {
+    padding: 20px;
+    text-align: center;
+    font-weight: 700;
+    color: rgba(3, 3, 3, 0.493);
+    font-size: xx-large;
+    border:rgba(3, 3, 3, 0.493) 1px solid;
+    border-radius: 10px;
+}
+
+.display-screen:last-child::after{
+    content: 'months';
+    position: absolute;
+    right: 60px;
+}
+
+section.fourth .steps {
+    display: flex;
+    justify-content: space-around;
+    padding-right: 10%;
+    align-items: center;
+    padding-left: 10%;
+    margin-bottom: 20px;
+}
+
+section.fourth .steps hr {
+    width: 20%;
+    border: 1px black solid;
+}
+
+section.fourth .card {
+    margin: 30px;
+}
+
+section.fifth {
+    background-color: black;
+    padding-top: 50%;
+    margin-top: -30%;
+    padding-bottom: 20%;
+    margin-bottom: -30%;
+}
+
+section.sixth h3 {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    max-width: 900px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+section.sixth form {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    border: black 1px solid;
+    max-width: 900px;
+    margin: auto
+}
+
+section.sixth .app-form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+section.sixth .app-form-group input {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #FBFAFA;
+}
+
+section.sixth .app-form-group.flex {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+section.sixth .app-form-group.flex:nth-child(2) .app-form-group:first-child {
+    width: 44%;
+}
+
+section.sixth .app-form-group.flex:nth-child(2) .app-form-group:last-child {
+    width: 54%;
+}
+
+section.sixth .app-form-group.flex:nth-child(3) .app-form-group:first-child {
+    width: 54%;
+}
+
+section.sixth .app-form-group.flex:nth-child(3) .app-form-group:last-child {
+    width: 44%;
+}
+
+section.seventh p:first-child {
+    font-weight: bold;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+footer a {
+    color: white;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 850px) {
+    .my-nav {
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        top: -350%;
+        background-color: white;
+        padding-bottom: 15px;
+        transition: .5s ease-in-out;
+    }
+
+    .hamburger {
+        display: block;
+    }
+    
+    .my-nav.show {
+        top: 70px;
+    }
+
+    .my-nav ul {
+        flex-direction: column;
+    }
 }

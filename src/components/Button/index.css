@@ -1,0 +1,21 @@
+.d-button {
+    border-radius: 10px;
+    padding: 5px 10px;
+    border: none;
+    margin-left: 10px;
+}
+
+.d-button.primary {
+    background-color: #EF283B;
+    color: white;
+}
+
+.d-button.secondary {
+    background-color: transparent;
+    color: #EF283B;
+    border: #EF283B solid 1px;
+}
+
+.d-button.primary:hover, .d-button.secondary:hover {
+    background-color: #b8707f;
+}
